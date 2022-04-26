@@ -233,8 +233,4 @@ footer {
         color: var(--timberwolf);
         background-color: var(--carolina-blue);
     }
-
-    #beranda img {
-        max-width: 300px;
-    }
 }
