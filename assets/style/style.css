@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS HEX */
+:root {
+    --timberwolf: #e7e1daff;
+    --blast-off-bronze: rgb(204, 126, 115);
+    --carolina-blue: #65a3cdff;
+    --smoky-black: #141210ff;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3, li, a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--carolina-blue);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.flex-row {
+    display: flex;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/**********************HEADER**********************/
+
+header#jumbotron {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    position: sticky;
+    top: 0;
+    border: 2px solid #e7e7e7;
+    background-color: var(--white);
+}
+
+.logo {
+    cursor: pointer;
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+    list-style-type: none;
+}
+
+.nav__links a {
+    color: var(--smoky-black);
+}
+
+.nav__links a:hover {
+    background-color: var(--blast-off-bronze);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+.active, .nav__links a:active {
+    background-color: var(--carolina-blue);
+    color: var(--white) !important;
+    border-radius: 25px;
+    padding: 5px 10px;
+}
+
+/**********************CONTENT**********************/
+
+main {
+    overflow: auto;
+    padding-bottom: 2%;
+}
+
+#content {
+    text-align: center;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.double {
+    flex-basis: 50%;
+}
+
+/* Beranda */
+#beranda {
+    margin: 0;
+    padding: 0;
+}
+
+#beranda img {
+    width: 100%;
+}
+
+#beranda .desc {
+    padding: 20px 0;
+}
+
+#beranda .desc strong {
+    color: var(--blast-off-bronze)
+}
+
+/* Waktu Operasional */
+#waktu-operasional .square {
+    flex-basis: 50%;
+    padding: 15px 0;
+}
+
+#waktu-operasional .time-desc {
+    font-size: medium;
+    font-weight: bolder;
+    color: var(--blast-off-bronze);
+    padding: 5px 0;
+}
+
+#waktu-operasional .time {
+    font-size: larger;
+}
+
+/* Layanan */
+#layanan {
+    padding: 10px 0;
+}
+
+#layanan img {
+    max-height: 80px;
+    object-position: center;
+}
+
+#layanan .square {
+    flex-basis: 20%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#layanan .square:hover {
+    font-weight: bold;
+    color: var(--blast-off-bronze);
+    transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 2px var(--timberwolf);
+}
+
+/* Kontak */
+#kontak a {
+    text-decoration: none;
+    color: var(--smoky-black);
+    text-align: center;
+}
+
+/**********************BIODATA**********************/
+aside {
+    min-width: 350px;
+    max-width: 500px;
+    margin: auto;
+    width: 50%;
+}
+
+#profile {
+    box-shadow: 0 4px 4px 2px var(--timberwolf);
+    border-radius: 10px;
+    padding: 35px 30px;
+    text-align: center;
+    color: var(--smoky-black)
+}
+
+#profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px 4px var(--timberwolf);
+}
+
+#profile > section{
+    padding: 10px 0;
+}
+
+#profile img {
+    border-radius: 50%;
+    max-width: 120px;
+    object-position: center;
+}
+
+/**********************FOOTER**********************/
+footer {
+    padding: 20px 10px;
+    color: white;
+    background-color: var(--smoky-black);
+    text-align: center;
+    font-weight: bold;
+}
+
+/**********************SCREEN**********************/
+@media screen and (max-width: 580px) {
+    header#jumbotron {
+        box-shadow: 0 2px 4px 2px #e7e7e7 !important;
+        max-height: 200px !important;
+    }
+
+    header#jumbotron .flex-row, #layanan .flex-row,
+    #kontak .flex-row {
+        flex-direction: column;
+    }
+
+    .nav__links a:active {
+        color: var(--timberwolf);
+        background-color: var(--carolina-blue);
+    }
+
+    #beranda img {
+        max-width: 300px;
+    }
+}
